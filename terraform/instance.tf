@@ -5,7 +5,7 @@ resource "aws_instance" "ec2-instance" {
   security_groups = [
     aws_security_group.allow-ssh.id,
     aws_security_group.allow_tls.id,
-    aws_security_group.http
+    aws_security_group.http.id
   ]
   tags = {
     Name = var.ami_name
